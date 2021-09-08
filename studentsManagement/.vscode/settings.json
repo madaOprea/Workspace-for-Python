@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": [
+        "./controller",
+        "./repository",
+        "./domain"
+    ]
+}
