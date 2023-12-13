@@ -1,16 +1,14 @@
-import os
-from Student import Student
-from Subject import Subject
+from domain.Subject import Subject
 
 
-class SubjectRepository:
+class SubjectRepo:
 
-    def __init__(self):
+    def _init_(self):
         self.__subjects = []
 
     def add_subject(self, labNo, description, deadline):
         subject = Subject(id, labNo, description, deadline)
-        self.subjects.append(subject)
+        self.__subjects.append(subject)
         print(f"The new subject {description} was added!")
 
     def edit_subject(self, subject_id, new_lab_no, new_description, new_deadline):
@@ -43,7 +41,7 @@ class SubjectRepository:
     def get_all_subjects(self):
         return self.__subjects
 
-    def __len__(self):
+    def _len_(self):
         return len(self.subjects)
 
     @staticmethod

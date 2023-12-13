@@ -1,28 +1,29 @@
-from datetime import datetime
-import os
-
 class Student:
     def __init__(self, id, name, group):
         self.__id = id
         self.__name = name
-        self.__group = group    
+        self.__group = group
 
     def get_id(self):
         return self.__id
 
-    def get___name(self):
-        return self.___name
+    def get_name(self):
+        return self.__name
 
-    def get_deadline(self):
-        return self.__deadline
-    
-    def __str__(self):
-        return f"problem(id={self.__id},name={self.__name},group={self.__group})"
+    def get_group(self):
+        return self.__group
 
-    def __repr__(self):
-        return str(self)
+    def set_id(self, new_id):
+        self.__id = new_id
+
+    def set_name(self, new_name):
+        self.__name = new_name
+
+    def set_group(self, new_group):
+        self.__group = new_group
 
     def __eq__(self, other):
-        if not isinstance(other, Student):
-            return False
-        return self.get_id() == other.get_id()
+        return self.__id == other.__id
+
+    def __str__(self):
+        return f'Id: {self.__id}\nNume: {self.__name}\nGrup: {self.__group}\n'
