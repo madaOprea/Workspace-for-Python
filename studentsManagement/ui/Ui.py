@@ -1,8 +1,5 @@
-from repository.SubjectRepo import SubjectRepo
-from service.StudentService import StudentService
-
-
 class UI:
+
     def _init_(self):
         self.studentService = StudentService()
         self.subjectRepository = SubjectRepo()
